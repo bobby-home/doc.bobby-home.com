@@ -1,0 +1,19 @@
+{
+  "name": "tech-house-doc",
+  "version": "0.0.1",
+  "description": "Documentation for mx tech house.",
+  "main": "index.js",
+  "authors": {
+    "name": "Maxime",
+    "email": "contact@maxime-moreau.fr"
+  },
+  "repository": "https://github.com/mxmaxime/doc-mx-tech-house/tech-house-doc",
+  "scripts": {
+    "dev": "vuepress dev src",
+    "build": "vuepress build src"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "vuepress": "^1.5.3"
+  }
+}

@@ -112,5 +112,7 @@ Now your bot is up, but nobody can interact with him (by default it refuses ever
 3) Ask the system to receive notifications through Telegram "Notification › User settings", create a new entry and link the Telegram chat with your account.
 
 ### Smart camera
-1) `camera` folder and run `make prod-up`.
-2) Wait a little bit, and check if everything looks good: `docker ps` (check statuses).
+1) Go to the admin "Alarm › Alarm statuss" and create a new entry for the device that will host the smart-camera.
+2) `camera` folder and run `make prod-up`.
+
+Wait a little bit, and check if everything looks good: `docker ps` (check statuses).

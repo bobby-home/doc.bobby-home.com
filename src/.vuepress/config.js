@@ -54,17 +54,45 @@ module.exports = {
           collapsable: false,
           children: [
             '',
-            'using-vue',
+            'docker',
             'something',
+          ]
+        },
+        {
+          title: 'Webapp',
+          children: [
+            'webapp/',
+            'webapp/camera',
+            'webapp/orm-pitfalls',
           ]
         },
         {
           title: 'Smart Camera',
           children: [
             'smart-camera/',
-            'smart-camera/tensorflow'
+            'smart-camera/tensorflow',
+            'smart-camera/docker',
           ]
 
+        },
+        {
+          title: 'MQTT',
+          children: [
+            'mqtt/',
+            'mqtt/docker.md'
+          ]
+        },
+        {
+          title: 'Network',
+          children: [
+            'network/'
+          ]
+        },
+        {
+          title: 'logs',
+          children: [
+            'logs/'
+          ]
         }
       ],
       // '/smart-camera/': [

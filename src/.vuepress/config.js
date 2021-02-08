@@ -54,6 +54,7 @@ module.exports = {
           collapsable: false,
           children: [
             '',
+            'setup',
             'docker',
           ]
         },

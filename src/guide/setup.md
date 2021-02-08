@@ -13,8 +13,6 @@ I use [balena](https://www.balena.io/etcher/) to burn my images, but you can use
 1. [Download Raspbian image](https://www.raspberrypi.org/): please go to raspberry pi **official** website.
 2. Burn the image on your sd card (:warning: choose the right disk, triple check)
 
-So know we have the raspbian os ready to go!
-
 ## Setup connexion
 ### Enable SSH
 Create a file named `ssh` in the boot folder of the SD card. This will enable ssh.
@@ -43,6 +41,7 @@ Where `192.168.1.0/24` is my network ip/mask ([CIDR notation](https://en.wikiped
 ### SSH Keys
 I suggest you (strongly recommend), to activate SSH connexion with ssh keys.
 That can be done easily by the `setup-ssh-keys.sh` script that will:
+
 - generate a key pair (ed25519)
 - send them on the rpi by ssh login@pi (you'll be asked the login & pi).
 - create your ~/.ssh/config for you if you want to, so you can easily connect to your rpi by doing `ssh user@hostname`. The hostname will be asked.
@@ -76,11 +75,11 @@ Then, go to your raspberry pi and create folders to upload services. I suggest `
 On your machine, go to `raspberrypi_central/core`.
 
 1) Create the mosquitto password: go to subfolder `mosquitto` and run `bash generate-password.sh`. This will create the passwd file in `core/config/mosquitto`. Go back to `core` root folder.
-2) Define your env variables by creating a `.env` file. Take variables from `.env.test` and change your mosquitto credentials.
+2) Define your env variables by creating a `.env` file. Take variables from `.env.example` and change your mosquitto credentials.
 3) Deploy it: `bash deploy.sh <user>@<host_name>:/home/pi/core`
 
 On your machine, go to `raspberrypi_central/smart-camera`.
-1) Define your env variables by creating a `.env` file. Take variables from `.env.test` and change your mosquitto credentials.
+1) Define your env variables by creating a `.env` file. Take variables from `.env.example` and change your mosquitto credentials.
 2) Deploy it: `bash deploy.sh <user>@<host_name>:/home/pi/camera`
 
 

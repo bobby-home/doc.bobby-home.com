@@ -26,13 +26,26 @@ MQTT meet all our requirements:
 - low footprint: to be able to run on a ESP8266 for example, and for the broker it is the same.
 - easy to use, specially for clients.
 
-## Process
+## Processes
 
 Why do we use a Process and not a Thread to run our smart camera software depending on the MQTT status recieved.
 
 This is because of the python GIL, only one thread can run with Python, so if we run our smart camera software in a thread, and the mqtt code related in another thread (the main one), then the main thread won't be ran thus we won't be able to recieve mqtt updates. So basically, when we run the smart camera software in a thread, it will starve the main one preventing it to switch off the smart camera.
 
 This comes with one trade-off: the communication between the mqtt related process and the smart-camera. So for example, if the user changes the ROI, then we have to stop and re-run the whole smart-camera process. Of course, we could add some IPC here, but we have decided not to do so to avoid maintenance issues. This is not a issue because this won't happen very often. Of course we will loose a bit of performance here but this is not a problem due to the frequency.
+
+### Why do we restart the camera process to update configuration
+Because this is hard to implement ipc (inter-process communication). Of course we could use some socket it is not that hard
+but this is code to maintain, test... And of course this is error/bug-prone.
+
+The configuration of the camera won't change frequently, so this won't impact very badly the performance of
+the overall system. Of course by restarting a new process we recreate the video stream and so one, which is
+kinda expensive but this won't happen frequently so this is not a problem.
+
+The first idea was to use Thread to have memory sharing out of the box, so we could change the ROI easily,
+but in Python a Thread is not executed on a different machine processor so this is not working: the camera thread
+is monopolise the process, thus the system is not able to receive mqtt updates. 
+
 
 ## Web part
 

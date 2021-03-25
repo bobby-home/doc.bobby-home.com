@@ -75,13 +75,13 @@ module.exports = {
         //   ]
 
         // },
-        // {
-        //   title: 'MQTT',
-        //   children: [
-        //     'mqtt/',
-        //     'mqtt/docker.md'
-        //   ]
-        // },
+        {
+          title: 'MQTT',
+          children: [
+            'mqtt/',
+            'mqtt/docker.md'
+          ]
+        },
         // {
         //   title: 'Network',
         //   children: [

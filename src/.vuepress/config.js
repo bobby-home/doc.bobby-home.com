@@ -66,20 +66,25 @@ module.exports = {
         //     'webapp/orm-pitfalls',
         //   ]
         // },
-        // {
-        //   title: 'Smart Camera',
-        //   children: [
-        //     'smart-camera/',
-        //     'smart-camera/tensorflow',
-        //     'smart-camera/docker',
-        //   ]
-
-        // },
         {
           title: 'MQTT',
           children: [
             'mqtt/',
             'mqtt/docker.md'
+          ]
+        },
+        {
+          title: 'Logs',
+          children: [
+            'logs/'
+          ]
+        },
+        {
+          title: 'Smart camera',
+          children: [
+            'smart-camera/',
+            'smart-camera/docker.md',
+            'smart-camera/tensorflow.md',
           ]
         },
         // {
@@ -88,12 +93,6 @@ module.exports = {
         //     'network/'
         //   ]
         // },
-        // {
-        //   title: 'logs',
-        //   children: [
-        //     'logs/'
-        //   ]
-        // }
       ],
       // '/smart-camera/': [
       //   {

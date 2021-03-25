@@ -90,25 +90,8 @@ Then you are going to run services on the raspberry. Connect to it!
 1) Go to the `core` folder, and run `bash up.sh`.
 2) Create your admin account: `make manage command=createsuperuser`.
 3) Connect to the admin: go to http://<raspberrypi_ip>:8000/admin.
-4) The device that hosts the core application has been registered but you have to give it a Location. In the admin, to go "Devices › Devices" and create a new location linked to this device.
-
-#### Create and configure your Telegram Bot
-Please check the [telegram bot documentation](https://core.telegram.org/bots), so every information is up to date.
-
-Basically, you have to:
-
-1) [Start a conversation with "BotFather"](https://t.me/botfather)
-2) Create a new bot, by sending to him this message: `/newbot` 
-3) Tada! Get your token *("HTTP Api")* and **save it in the admin** by creating a new entry in: "House > Telegram bots".
-4) Open a new conversation with your bot. BotFather should give you a link.
-
-You can now run the telegram service: `make telegram_bot`.
-
-Now your bot is up, but nobody can interact with him (by default it refuses everybody for security purposes).
-
-1) Type "/start" in the Telegram chat to your bot. It will create a row in "Telegram bot starts". Go to your admin, and grab your `user_id`: "House > Telegram bot starts".
-2) Create a new entry with your `user_id` in "Notification >  User telegram bot chat ids".
-3) Ask the system to receive notifications through Telegram "Notification › User settings", create a new entry and link the Telegram chat with your account.
+4) The device that hosts the core application has been registered you can change it if you want. In the admin, to go "Devices › Devices" and create a new location linked to this device.
+5) To through the setup flow: http://<raspberrypi_ip>:8000/setup
 
 ### Smart camera
 1) Go to the admin "Alarm › Alarm statuss" and create a new entry for the device that will host the smart-camera.

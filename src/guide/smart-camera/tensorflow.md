@@ -54,6 +54,15 @@ The goal would be to train the model only on labels that we actually use: human 
 We tried others SSD models but the results look the same *(performance/accuracy)*.
 :::
 
+## Performance considerations
+When we google "object detection with raspberry pi's" we find a lot of articles talking about "live" processing with the maximum fps that the device can process.
+
+It might be useful for some applications to process frames at a high fps rate, but it is not our case! In real life flash does exist and people take seconds, minutes to move. So processing at 20-30 fps is not better than processing at 1-2 fps. This is why the system analyze frames *(with the object detection api and thus the heavy machine learning model)* at 1 frame per seconds which is sufficient. Thanks to this, we can analyze frames from multiple devices and run the whole core application from only one recommended raspberry pi! This is truly amazing because it makes the hardware setup affordable!
+
+::: tip Source
+One user has 3 dumb cameras (rpi zero) and one smart-camera processed by one raspberry pi 4/4gb ram, and it works like a charm!
+:::
+
 ## Where is the code?
 You can find all related code in the folder `object_detection` of the `smart-camera`. This folder is **totally** independant from the rest of the software.
 

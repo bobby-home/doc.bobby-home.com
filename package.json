@@ -1,13 +1,13 @@
 {
-  "name": "tech-house-doc",
+  "name": "doc-bobby-home",
   "version": "0.0.1",
-  "description": "Documentation for mx tech house.",
+  "description": "Documentation for Bobby home.",
   "main": "index.js",
   "authors": {
-    "name": "Maxime",
+    "name": "Maxime Moreau",
     "email": "contact@maxime-moreau.fr"
   },
-  "repository": "https://github.com/mxmaxime/doc-mx-tech-house/tech-house-doc",
+  "repository": "https://github.com/mxmaxime/doc-bobby-home",
   "scripts": {
     "dev": "vuepress dev src",
     "build": "vuepress build src"

@@ -4,7 +4,7 @@ module.exports = {
   /**
    * Ref：https://v1.vuepress.vuejs.org/config/#title
    */
-  title: 'Vuepress Docs Boilerplate',
+  title: 'Bobby home',
   /**
    * Ref：https://v1.vuepress.vuejs.org/config/#description
    */
@@ -39,13 +39,13 @@ module.exports = {
         link: '/guide/',
       },
       {
-        text: 'Config',
-        link: '/config/'
+        text: 'Github',
+        link: 'https://github.com/mxmaxime/bobby-home'
       },
       {
         text: 'VuePress',
         link: 'https://v1.vuepress.vuejs.org'
-      }
+      },
     ],
     sidebar: {
       '/guide/': [

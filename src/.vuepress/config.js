@@ -69,7 +69,6 @@ module.exports = {
           children: [
             // 'core/',
             'core/dates',
-            // 'core/orm-pitfalls',
           ]
         },
         {
@@ -93,6 +92,7 @@ module.exports = {
             'smart-camera/tensorflow.md',
           ]
         },
+      ],
     }
   },
 

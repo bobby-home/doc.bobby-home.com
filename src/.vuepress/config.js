@@ -64,14 +64,14 @@ module.exports = {
             'docker/',
           ]
         },
-        // {
-        //   title: 'Webapp',
-        //   children: [
-        //     'webapp/',
-        //     'webapp/camera',
-        //     'webapp/orm-pitfalls',
-        //   ]
-        // },
+        {
+          title: 'Core',
+          children: [
+            // 'core/',
+            'core/dates',
+            // 'core/orm-pitfalls',
+          ]
+        },
         {
           title: 'MQTT',
           children: [
@@ -93,22 +93,6 @@ module.exports = {
             'smart-camera/tensorflow.md',
           ]
         },
-        // {
-        //   title: 'Network',
-        //   children: [
-        //     'network/'
-        //   ]
-        // },
-      ],
-      // '/smart-camera/': [
-      //   {
-      //     title: 'Smart camera',
-      //     children: [
-      //       '',
-      //       'tensorflow'
-      //     ]
-      //   }
-      // ],
     }
   },
 

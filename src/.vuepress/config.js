@@ -54,8 +54,14 @@ module.exports = {
           collapsable: false,
           children: [
             '',
-            'setup',
-            'docker',
+            'setup/',
+            'setup/deploy',
+          ]
+        },
+        {
+          title: 'Docker',
+          children: [
+            '',
           ]
         },
         // {

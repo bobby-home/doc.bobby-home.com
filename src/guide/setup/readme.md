@@ -1,6 +1,5 @@
-# Setup
+# Setup - Prepare your RaspberryPis
 
-## Prepare your RaspberryPi
 ::: danger
 Warning: this is not a stable software and the documentation may miss some details for now. If you have any troubles, please create a github issue.
 :::
@@ -13,7 +12,18 @@ I use [balena](https://www.balena.io/etcher/) to burn my images, but you can use
 1. [Download Raspbian image](https://www.raspberrypi.org/): please go to raspberry pi **official** website.
 2. Burn the image on your sd card (:warning: choose the right disk, triple check)
 
-## Setup connexion
+## Setup network connexion
+
+### Create static ip
+On your network you have a DHCP server that delivers IP to devices.
+
+It is very useful to have your raspberrypis assigned to a static ip, that means that the IP will never change because the DHCP server knows what IP to assign to this device. This is totally dependent from your network, generally your DHCP server is provided by your router. Get information about it and assign a static ip for every device of this system.
+
+:::danger
+DHCP assigns an IP to a MAC address so if the mac address change, the IP change. 
+It is the case if you change the network interface: you decide to go from WiFi to eth link. In this case you can change the static ip to reflect the mac address change, it's up to you.
+:::
+
 ### Enable SSH
 Create a file named `ssh` in the boot folder of the SD card. This will enable ssh.
 

@@ -34,7 +34,7 @@ Your mqtt credentials in the `.env` file have to be the same as the one that we 
 ### Run core services
 You are going to run services on the raspberry. Connect to it and go to the `core` folder.
 
-1) Generate your mosquitto credentials: `make generate-mqtt-password`.
+1) Generate your mosquitto credentials: `make user=<user> generate-mqtt-password`.
 2) run `bash up.sh`.
 4) To through the setup flow: `http://<raspberrypi_ip>:8000/setup`.
 

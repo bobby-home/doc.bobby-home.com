@@ -75,7 +75,8 @@ module.exports = {
           title: 'MQTT',
           children: [
             'mqtt/',
-            'mqtt/docker.md'
+            'mqtt/docker.md',
+            'mqtt/troubleshooting.md'
           ]
         },
         {

@@ -19,13 +19,11 @@ The hostname is the one that you defined when you configured ssh at the previous
 bash setup.sh <user>@<host_name> install.sh
 ```
 
-Then, go to your raspberry pi and create folders to upload services. I suggest `mkdir /home/pi/core` and `mkdir /home/pi/camera`.
-
 ## Core
 On your machine, go to `raspberrypi_central/core`.
 
 1) Define your env variables by creating a `.env` file. Take variables from `.env.example` and change your mosquitto credentials.
-2) Deploy it: `bash deploy.sh <user>@<host_name>:/home/pi/core`
+2) Deploy it: `bash deploy.sh <user>@<host_name> /home/pi/core`
 
 :::tip
 Your mqtt credentials in the `.env` file have to be the same as the one that we will create for the broker service.
@@ -41,7 +39,7 @@ You are going to run services on the raspberry. Connect to it and go to the `cor
 ## Smart camera
 On your machine, go to `raspberrypi_central/smart-camera`.
 1) Define your env variables by creating a `.env` file. Take variables from `.env.example` and change your mosquitto credentials.
-2) Deploy it: `bash deploy.sh <user>@<host_name>:/home/pi/camera`
+2) Deploy it: `bash deploy.sh <user>@<host_name> /home/pi/camera`
 
 ### Run smart camera services
 You are going to run services on the raspberry. Connect to it!

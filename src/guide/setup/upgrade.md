@@ -23,10 +23,14 @@ git checkout tags/<version>
 
 If you use git and you already cloned the project,
 
-1) [Go to the  Or use git to pull the tag corresponding to the wanted version if you cloned the project.
-2) Read the corresponding notes about deployment to know which applications are impacted *(i.e smart-camera, core)*.
-3) Deploy applications that are impacted. Please refer to the deploy guide.
-4) Up your services according to the deploy guide or **follow special instructions given by the releases note**.
+## Deploy the release
+1) Read the corresponding notes about deployment to know which applications are impacted *(i.e smart-camera, core)*. You can find these instructions in the corresponding [release note](https://github.com/mxmaxime/bobby-home/releases).
+2) **follow special instructions given by the releases note**.
+
+
+::: tip
+To deploy applications and run your container, please refer to the deploy guide.
+:::
 
 When you will run your docker containers after upgrading, you will see messages like:
 

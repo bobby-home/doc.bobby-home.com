@@ -56,6 +56,7 @@ module.exports = {
             '',
             'setup/',
             'setup/deploy',
+            'setup/logs',
             'setup/upgrade',
           ]
         },

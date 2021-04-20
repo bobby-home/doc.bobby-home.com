@@ -61,16 +61,27 @@ module.exports = {
           ]
         },
         {
-          title: 'Docker',
-          children: [
-            'docker/',
-          ]
-        },
-        {
           title: 'Core',
           children: [
             // 'core/',
+            'core/architecture',
+            'core/task-queue',
+            // 'core/pings',
             'core/dates',
+          ]
+        },
+        {
+          title: 'Smart camera',
+          children: [
+            'smart-camera/',
+            'smart-camera/docker.md',
+            'smart-camera/tensorflow.md',
+          ]
+        },
+        {
+          title: 'Docker',
+          children: [
+            'docker/',
           ]
         },
         {
@@ -86,15 +97,7 @@ module.exports = {
           children: [
             'logs/'
           ]
-        },
-        {
-          title: 'Smart camera',
-          children: [
-            'smart-camera/',
-            'smart-camera/docker.md',
-            'smart-camera/tensorflow.md',
-          ]
-        },
+        }
       ],
     }
   },

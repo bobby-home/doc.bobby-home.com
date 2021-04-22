@@ -27,6 +27,22 @@ It is the case if you change the network interface: you decide to go from WiFi t
 ### Enable SSH
 Create a file named `ssh` in the boot folder of the SD card. This will enable ssh.
 
+## Docker stats reports zero memory usage
+If you want to use `docker stats`, it does not work properly by default, you won't be able to see memory usage.
+
+
+Fix it by adding this the following instructions at the end of the cmdline.txt file.
+
+```
+cgroup_enable=cpuset cgroup_enable=memory cgroup_memory=1
+```
+
+Then it should work.
+
+Related github issues:
+- [docker stats CONTAINER reports zero memory usage](https://github.com/moby/moby/issues/18420)
+- [docker stats doesn't report memory usage on arm64](https://github.com/docker/for-linux/issues/1112)
+
 ### WiFi
 To add network info you need to create a second text file called `wpa_supplicant.conf` and place that in the root of the boot SD as the `ssh` file.
 

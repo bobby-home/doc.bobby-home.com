@@ -8,6 +8,18 @@ Of course take the IP that hosts the Grafana container.
 
 It allows us to watch logs from every device. For example, if you have many smart-cameras this is handy useful because you do not have to log to every raspberry pis to check what is going on.
 
+::: tip Remember
+Remember: default login/password are admin/admin. Useful for your first connection.
+:::
+
+## Reset Grafana password
+Just in case you loose your Grafana password, you can reset it:
+
+```
+docker exec -it <name of grafana container> grafana-cli admin reset-admin-password <fill in password>
+```
+
+
 ## Connect Loki data source
 To be able to visualise your logs, you have to connect the Loki data source. To do so, go to "Configuration (cogwheel) > Data sources" and select "Loki".
 ![Grafana data sources](./imgs/grafana-datasources.png)

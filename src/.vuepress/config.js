@@ -66,6 +66,8 @@ module.exports = {
             // 'core/',
             'core/architecture',
             'core/task-queue',
+            'core/tasks',
+            'core/telegram',
             // 'core/pings',
             'core/dates',
           ]
@@ -76,6 +78,7 @@ module.exports = {
             'smart-camera/',
             'smart-camera/docker.md',
             'smart-camera/tensorflow.md',
+            'smart-camera/livestream.md',
           ]
         },
         {

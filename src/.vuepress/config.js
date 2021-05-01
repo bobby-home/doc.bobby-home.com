@@ -68,7 +68,7 @@ module.exports = {
             'core/task-queue',
             'core/tasks',
             'core/telegram',
-            // 'core/pings',
+            'core/monitor-mqtt-services.md',
             'core/dates',
           ]
         },

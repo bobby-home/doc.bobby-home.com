@@ -76,6 +76,7 @@ module.exports = {
           title: 'Smart camera',
           children: [
             'smart-camera/',
+            'smart-camera/architecture.md',
             'smart-camera/docker.md',
             'smart-camera/tensorflow.md',
             'smart-camera/livestream.md',

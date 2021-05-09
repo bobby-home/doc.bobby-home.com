@@ -8,26 +8,36 @@ Download the wanted version on the [Github repository Bobby Home](https://github
 From the previous step you should have your loved rasbperrypi up and running and you should be able to ssh it.
 :::
 
-Go to the folder `raspberrypi_central`, and run this command to setup your raspberry pi's.
+Go to the folder where bobby is, and run this command to setup your raspberry pi.
+
+```shell
+bash setup.sh <user>@<host_name> install.sh
+```
 
 ::: tip
 ssh user is by default `pi` unless you changed it.
 The hostname is the one that you defined when you configured ssh at the previous step.
 :::
 
-```shell
-bash setup.sh <user>@<host_name> install.sh
-```
-
 ## Core
-On your machine, go to `raspberrypi_central/core`.
+On your machine, go to `core`.
 
 1) Define your env variables by creating a `.env` file. Take variables from `.env.example` and change your mosquitto credentials.
-2) Deploy it: `bash deploy.sh <user>@<host_name> /home/pi/core`
+2) Deploy it: `bash deploy.sh <user>@<host_name> /home/pi/core y`. If you do not want to deploy `.env` file, remove the `y` parameter: `bash deploy.sh <user>@<host_name> /home/pi/core`.
+
+:::warning Update DJANGO_ALLOWED_HOST
+Don't forget to update the env variable `DJANGO_ALLOWED_HOSTS` to add the raspberry pi IP as described in the `.env.example`.
+Otherwise you will get `DisallowedHost` error when you will access to the web application.
+:::
 
 :::tip
-Your mqtt credentials in the `.env` file have to be the same as the one that we will create for the broker service.
+Your mqtt credentials in the `.env` file have to be the same as the one that we will create for the broker service in the next step.
 :::
+
+:::tip
+If you want to define the `.env` file directly on the raspberry pi it is ok, remove the last parameter "y" when you deploy.
+:::
+
 
 ### Run core services
 You are going to run services on the raspberry. Connect to it and go to the `core` folder.
@@ -37,7 +47,7 @@ You are going to run services on the raspberry. Connect to it and go to the `cor
 4) To through the setup flow: `http://<raspberrypi_ip>:8000/setup` *(for the first deploy)*.
 
 ## Smart camera
-On your machine, go to `raspberrypi_central/smart-camera`.
+On your machine, go to `smart-camera`.
 1) Define your env variables by creating a `.env` file. Take variables from `.env.example` and change your mosquitto credentials.
 2) Deploy it: `bash deploy.sh <user>@<host_name> /home/pi/camera`
 

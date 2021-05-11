@@ -65,6 +65,7 @@ module.exports = {
           title: 'Core',
           children: [
             // 'core/',
+            'core/automations.md',
             'core/architecture',
             'core/task-queue',
             'core/tasks',

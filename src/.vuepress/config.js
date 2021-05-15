@@ -4,7 +4,7 @@ module.exports = {
   /**
    * Ref：https://v1.vuepress.vuejs.org/config/#title
    */
-  title: 'Bobby home',
+  title: 'Bobby Home',
   /**
    * Ref：https://v1.vuepress.vuejs.org/config/#description
    */
@@ -40,6 +40,10 @@ module.exports = {
         link: '/guide/',
       },
       {
+        text: 'API',
+        link: '/api/',
+      },
+      {
         text: 'Github',
         link: 'https://github.com/mxmaxime/bobby-home'
       },
@@ -49,6 +53,16 @@ module.exports = {
       },
     ],
     sidebar: {
+      '/api/': [
+        {
+          title: 'MQTT API',
+          collapsable: false,
+          children: [
+            'mqtt/',
+            'mqtt/alarm'
+          ]
+        }
+      ],
       '/guide/': [
         {
           title: 'Guide',
@@ -65,8 +79,9 @@ module.exports = {
           title: 'Core',
           children: [
             // 'core/',
-            'core/automations.md',
             'core/architecture',
+            'core/automations.md',
+            'core/alarm.md',
             'core/task-queue',
             'core/tasks',
             'core/telegram',
@@ -95,7 +110,8 @@ module.exports = {
           children: [
             'mqtt/',
             'mqtt/docker.md',
-            'mqtt/troubleshooting.md'
+            'mqtt/troubleshooting.md',
+            'mqtt/cli-testing.md'
           ]
         },
         {

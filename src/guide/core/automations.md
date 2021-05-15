@@ -15,6 +15,19 @@ and two triggers:
 Examples:
 - publish mqtt message when a motion is detected and when people left: outside of Bobby you can use this event to turn the lights on, trigger your speakers and so on.
 
+## Why?
+We aim to keep the code base of Bobby as easy and little as possible.
+For instance, we don't and won't allow you to control your connected lights but you can thanks to an Automation.
+
+So basically, we won't implement a ton of features but we give you the tools to create them easily.
+
+:::warning Disclamer
+The intent is not to have "complex" Automations with if/else, flow creation and so on.
+The idea is to bring the ability to extend Bobby to other services that can do this. We don't want to reinvent the wheel.
+Thanks to this, **you can use whatever you want to create powerful features outside of Bobby**.
+:::
+
+
 ## Creating automations
 As of today, you can only create automations *(and related objects)* through the django admin.
 
@@ -25,9 +38,3 @@ Enjoy :rocket:
 
 ![example of automation with mqtt action](./img/action-mqtt.png)
 
-## Why?
-We aim to keep the code base of Bobby as easy and little as possible.
-
-For instance, we don't and won't allow you to control your connected lights but you can thanks to an Automation.
-
-So basically, we won't implement a ton of features but we give you the tools to create them easily.

@@ -56,10 +56,18 @@ module.exports = {
       '/api/': [
         {
           title: 'MQTT API',
-          collapsable: false,
+          collapsable: true,
           children: [
             'mqtt/',
             'mqtt/alarm'
+          ]
+        },
+        {
+          title: 'Core',
+          collapsable: true,
+          children: [
+            'core/',
+            'core/camera.md'
           ]
         }
       ],
